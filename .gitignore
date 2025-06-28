@@ -1,0 +1,23 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+.env
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# MLflow
+mlruns/
+.trash/
+
+# Artifacts
+artifacts/
+*.pkl
+*.json
+*.csv
