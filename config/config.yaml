@@ -1,0 +1,5 @@
+data_loader:
+  dataset: california_housing
+  target_column: MedHouseVal
+  test_size: 0.2
+  random_state: 42
