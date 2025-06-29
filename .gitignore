@@ -1,23 +1,26 @@
-# Ignore Python cache
+# Byte-compiled / cache files
 __pycache__/
-*.pyc
+*.py[cod]
+*.log
 
 # Virtual environments
+.venv/
+env/
 venv/
-.env
+ENV/
 
 # Jupyter Notebooks
 .ipynb_checkpoints/
 
-# Logs
-*.log
-
-# MLflow
+# Config / Artifacts / Logs
+artifacts/
 mlruns/
 .trash/
-
-# Artifacts
-artifacts/
 *.pkl
-*.json
 *.csv
+*.json
+
+# IDE / System files
+.vscode/
+.DS_Store
+Thumbs.db
