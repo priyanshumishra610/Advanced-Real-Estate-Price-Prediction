@@ -2,6 +2,8 @@
 
 from src.ingest.data_loader import load_california_housing_data
 from src.preprocessing.data_splitter import split_data
+from src.preprocessing.handle_missing import handle_missing_values
+from src.preprocessing.scaler import scale_features
 from src.utils.config_loader import load_config
 from src.utils.logger import get_logger
 
@@ -20,8 +22,11 @@ def main():
         random_state=config["data_loader"]["random_state"]
     )
 
-    logger.info("✅ Data splitting completed.")
-    logger.info(f"Sample train data:\n{X_train.head()}")
+    X_train, X_test = handle_missing_values(X_train, X_test)
+    X_train, X_test = scale_features(X_train, X_test)
+
+    logger.info("✅ Preprocessing pipeline completed.")
+    logger.info(f"Processed train sample:\n{X_train.head()}")
 
 if __name__ == "__main__":
     main()
