@@ -4,6 +4,8 @@ from src.ingest.data_loader import load_california_housing_data
 from src.preprocessing.data_splitter import split_data
 from src.preprocessing.handle_missing import handle_missing_values
 from src.preprocessing.scaler import scale_features
+from src.modeling.model_trainer import train_model
+from src.modeling.evaluator import evaluate_model
 from src.utils.config_loader import load_config
 from src.utils.logger import get_logger
 
@@ -25,8 +27,10 @@ def main():
     X_train, X_test = handle_missing_values(X_train, X_test)
     X_train, X_test = scale_features(X_train, X_test)
 
-    logger.info("✅ Preprocessing pipeline completed.")
-    logger.info(f"Processed train sample:\n{X_train.head()}")
+    model = train_model(X_train, y_train)
+    evaluate_model(model, X_test, y_test)
+
+    logger.info("✅ Pipeline execution completed successfully.")
 
 if __name__ == "__main__":
     main()
