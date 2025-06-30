@@ -2,6 +2,14 @@
 
 An end-to-end production-ready machine learning project built using **ZenML**, **MLflow**, **BentoML**, and **GitHub Actions**. It predicts California housing prices and follows the best MLOps practices including CI/CD, model tracking, evaluation, service deployment, and health monitoring.
 
+![CI/CD](https://github.com/priyanshumishra610/property-price-prediction/actions/workflows/mlops-pipeline.yml/badge.svg)
+![ZenML](https://img.shields.io/badge/MLOps-ZenML-orange)
+![MLflow](https://img.shields.io/badge/Tracking-MLflow-blue)
+![BentoML](https://img.shields.io/badge/Serving-BentoML-green)
+![License](https://img.shields.io/badge/license-MIT-brightgreen)
+![Python](https://img.shields.io/badge/Python-3.10%2B-yellow)
+
+
 ---
 
 ## 🚀 Project Highlights
