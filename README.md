@@ -97,13 +97,3 @@ Priyanshu Mishra
 
 ⭐️ Star the Repo
 If you like this project, leave a ⭐️ — it helps others discover high-quality MLOps templates.
-
----
-
-### ✅ Next Step:
-You can copy this content into your `README.md`, tweak your GitHub/LinkedIn links, and optionally:
-- Add screenshots
-- Link to your blog/Notion write-up (if any)
-- Write a post tagging [@ZenML](https://twitter.com/zenml_io)
-
-Would you like help adding badges or screenshots too?
