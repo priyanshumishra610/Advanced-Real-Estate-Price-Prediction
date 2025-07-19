@@ -1,31 +1,31 @@
 # 🏠 Advanced Property Price Prediction MLOps Pipeline
 
-An end-to-end **production-ready** machine learning project built using **ZenML**, **MLflow**, **BentoML**, and **GitHub Actions**. It predicts **California housing prices** and follows modern **MLOps best practices**, including CI/CD, model tracking, experiment management, deployment, and health monitoring.
+An end-to-end **production-ready** machine learning pipeline to predict **California housing prices**, built using **ZenML**, **MLflow**, **BentoML**, and **GitHub Actions** — following modern **MLOps best practices**: CI/CD, model tracking, experiment management, scalable deployment, and robust monitoring.
 
 ![CI/CD](https://github.com/priyanshumishra610/property-price-prediction/actions/workflows/mlops-pipeline.yml/badge.svg)
 ![ZenML](https://img.shields.io/badge/MLOps-ZenML-orange)
 ![MLflow](https://img.shields.io/badge/Tracking-MLflow-blue)
 ![BentoML](https://img.shields.io/badge/Serving-BentoML-green)
-![License](https://img.shields.io/badge/license-MIT-brightgreen)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-yellow)
+![License](https://img.shields.io/badge/license-MIT-brightgreen)
 
 ---
 
-## 🚀 Project Highlights
+## 🎯 Key Highlights
 
-✅ Modular ZenML pipelines
+✅ **Modular ZenML pipelines** for ingestion, preprocessing, training, evaluation, and deployment
 
-✅ MLflow integration for experiment tracking
+✅ **MLflow integration** for experiment tracking & model registry
 
-✅ Multiple models trained and compared (Linear, Ridge, Lasso, Random Forest)
+✅ Train and compare **multiple models** (Linear, Ridge, Lasso, Random Forest)
 
-✅ Automated model comparison & evaluation
+✅ **Automated evaluation & comparison**
 
-✅ BentoML service for real-time API predictions
+✅ **BentoML service** for real-time REST API predictions
 
-✅ GitHub Actions CI/CD workflow with linting, testing, deployment, and rollback
+✅ **Fully automated CI/CD** with GitHub Actions (linting, testing, deploying, rollback)
 
-✅ Code quality checks and health monitoring
+✅ **Code quality checks & health monitoring**
 
 ---
 
@@ -35,10 +35,24 @@ An end-to-end **production-ready** machine learning project built using **ZenML*
 | -------------- | -------------------------------------- |
 | ZenML          | Pipeline orchestration                 |
 | MLflow         | Experiment tracking & artifact logging |
-| BentoML        | Model serving & REST API creation      |
+| BentoML        | Model packaging, serving & API         |
 | GitHub Actions | CI/CD automation                       |
 | Scikit-learn   | ML models & preprocessing              |
 | Pytest + Black | Testing & code formatting              |
+
+---
+
+## 🏛️ High-Level Architecture
+
+```mermaid
+graph TD
+  A[Raw Data] --> B[ZenML Pipeline]
+  B --> C[MLflow Tracking]
+  C --> D[Trained Model]
+  D --> E[BentoML Service]
+  E --> F[REST API Endpoint]
+  F --> G[Client / User]
+```
 
 ---
 
@@ -71,55 +85,94 @@ property-price-prediction/
 
 ---
 
-## 🧪 Run Locally
+## ⚙️ Local Development
 
 ```bash
-# 1️⃣ Clone the repo & set up virtual environment
+# 📥 1️⃣ Clone the repo & set up virtual environment
 git clone https://github.com/<your-username>/property-price-prediction.git
 cd property-price-prediction
-python -m venv venv && source venv/bin/activate  # On Windows: venv\Scripts\activate
+python -m venv venv && source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
-# 2️⃣ Initialize ZenML & run pipeline
+# 🔗 2️⃣ Initialize ZenML & run pipeline
 zenml init
-python zenml_pipeline.py  # Or: python enhanced_zenml_pipeline.py
+python zenml_pipeline.py
+# or
+python enhanced_zenml_pipeline.py
 
-# 3️⃣ View MLflow UI
+# 📊 3️⃣ Start MLflow UI for experiment tracking
 mlflow ui --host 0.0.0.0 --port 5000
-# Access MLflow at: http://localhost:5000
+# Visit: http://localhost:5000
 
-# 4️⃣ Serve REST API with BentoML
+# 🚀 4️⃣ Serve REST API with BentoML
 bentoml serve bentoml_service:PropertyPriceService
-# Access Swagger UI at: http://localhost:3000
+# Visit Swagger UI: http://localhost:3000
 ```
 
 ---
 
-## 🔁 CI/CD Pipeline
+## 🔁 CI/CD Workflow
 
-**GitHub Actions** automatically runs on every push:
+Automated **GitHub Actions** pipeline on each push:
+✅ Code linting & formatting checks
 
-* ✅ Lint & format check
-* ✅ Unit tests with Pytest
-* ✅ Run ZenML pipeline
-* ✅ Build BentoML service
-* ✅ Perform health checks
-* ✅ Deploy on success
-* ✅ Rollback on failure
+✅ Unit tests with Pytest
+
+✅ Run ZenML pipelines
+
+✅ Build BentoML service
+
+✅ Health checks
+
+✅ Deploy on success
+
+✅ Rollback on failure if needed
 
 **Workflow:** `.github/workflows/mlops-pipeline.yml`
+
+---
+
+## 🌐 Roadmap
+
+| Phase   | Description                                | Status         |
+| ------- | ------------------------------------------ | -------------- |
+| Phase 1 | Core ZenML pipelines, MLflow setup         | ✅ Completed    |
+| Phase 2 | CI/CD integration with GitHub Actions      | ✅ Completed    |
+| Phase 3 | BentoML deployment & serving               | ✅ Completed    |
+| Phase 4 | Monitoring, scaling & cloud deployment     | 🚧 In Progress |
+| Phase 5 | Extend with advanced models, feature store | 🗂️ Planned    |
+
+---
+
+## 💡 Future Enhancements
+
+* Add **cloud-native orchestration** with Kubernetes & Helm
+* Integrate **Prometheus + Grafana** for monitoring
+* Use **Feast** for feature store management
+* Build a **simple Streamlit dashboard** for user interaction
 
 ---
 
 ## 👨‍💻 Author
 
 **Priyanshu Mishra**
-*“Driven to build world-class AI products with robust MLOps.”*
+
+> *“Building world-class AI pipelines with robust MLOps, one repo at a time.”*
+
 🔗 [GitHub](https://github.com/priyanshumishra610)
 
 ---
 
-## ⭐️ Star This Repo
+## ⭐️ Support & Share
 
-If you find this project helpful, **star ⭐️ it** — it motivates open-source contributors and helps others discover high-quality **MLOps templates**.
+If you find this template valuable — **star ⭐️ it**, **share it**, and feel free to **fork & contribute!**
+
+---
+
+## 📄 License
+
+**MIT License** — free for personal & commercial use.
+**Use it. Improve it. Share it.**
+
+
 
