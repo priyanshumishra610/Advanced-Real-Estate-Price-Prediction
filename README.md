@@ -114,6 +114,7 @@ bentoml serve bentoml_service:PropertyPriceService
 ## 🔁 CI/CD Workflow
 
 Automated **GitHub Actions** pipeline on each push:
+
 ✅ Code linting & formatting checks
 
 ✅ Unit tests with Pytest
