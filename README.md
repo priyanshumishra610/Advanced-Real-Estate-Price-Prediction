@@ -1,4 +1,4 @@
-# 🏠 Advanced Property Price Prediction MLOps Pipeline
+# 🏠 Advanced Real Estate Price Prediction MLOps Pipeline
 
 An end-to-end **production-ready** machine learning pipeline to predict **California housing prices**, built using **ZenML**, **MLflow**, **BentoML**, and **GitHub Actions** — following modern **MLOps best practices**: CI/CD, model tracking, experiment management, scalable deployment, and robust monitoring.
 
