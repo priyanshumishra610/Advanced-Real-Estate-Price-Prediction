@@ -89,7 +89,7 @@ property-price-prediction/
 
 ```bash
 # 📥 1️⃣ Clone the repo & set up virtual environment
-git clone https://github.com/<your-username>/property-price-prediction.git
+git clone https://github.com/priyanshumishra610/Advanced-Real-Estate-Price-Prediction.git
 cd property-price-prediction
 python -m venv venv && source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
